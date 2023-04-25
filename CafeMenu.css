@@ -1,0 +1,120 @@
+Step 1Passed As you learned in the last few steps of the Cat Photo App,
+there is a basic structure needed to start building your web page. Add the <!DOCTYPE html>tag,
+and an html element with a lang attribute of en. Step 2Passed The h1 through h6 heading elements are used to signify the importance of content below them. The lower the number,
+the higher the importance,
+so h2 elements have less importance than h1 elements. Only use one h1 element per page and place lower importance headings below higher importance headings. Below the h1 element,
+add an h2 element with this text: Cat Photos Solution: <h1>CatPhotoApp</h1>Step 3Passed The p element is used to create a paragraph of text on websites. Create a p element below your h2 element and give it the following text: See more cat photos in our gallery. solution: <h2>Cat Photos</h2>Step 4Passed Commenting allows you to leave messages without affecting the browser display. It also allows you to make code inactive. A comment in HTML starts with <!--,
+contains any number of lines of text,
+and ends with -->. For example,
+the comment <!-- TODO: Remove h1 -->contains the text TODO: Remove h1. Add a comment above the p element with this text: TODO: Add link to cat photos solution;
+<p>See more cat photos in our gallery.</p>Step 5Passed HTML5 has some elements that identify different content areas. These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility. Identify the main section of this page by adding a <main>opening tag before the h1 element,
+and a </main>closing tag after the p element. solution;
+<h1>CatPhotoApp</h1><h2>Cat Photos</h2><!-- TODO: Add link to cat photos --><p>See more cat photos in our gallery.</p>Step 6Passed In the previous step,
+you put the h1,
+h2,
+comment,
+and p elements inside the main element. This is called nesting. Nested elements should be placed two spaces further to the right of the element they are nested in. This spacing is called indentation and it is used to make HTML easier to read. The h1 element,
+h2 element and the comment are indented two spaces more than the main element in the code below. Use the space bar on your keyboard to add two more spaces in front of the p element so that it is indented properly as well. solution;
+<main><h1>CatPhotoApp</h1><h2>Cat Photos</h2><!-- TODO: Add link to cat photos --><p>See more cat photos in our gallery.</p></main>Step 7Passed You can add images to your website by using the img element. img elements have an opening tag without a closing tag. A tag for an element without a closing tag is known as a self-closing tag. Add an img element below the p element. At this point,
+no image will show up in the browser. solution;
+<p>See more cat photos in our gallery.</p>Step 8Passed HTML attributes are special words used inside the opening tag of an element to control the element's behavior. The src attribute in an img element specifies the image's URL (where the image is located). Here is an example of an img element with a src attribute pointing to the freeCodeCamp logo: <img src="https://cdn.freecodecamp.org/platform/universal/fcc_secondary.svg" Step 9Passed All img elements should have an alt attribute. The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load. For example, <img src="cat.jpg" alt="A cat"> has an alt attribute with the text A cat.
+ Inside the img element,
+add an alt attribute with this text: A cute orange cat lying on its back solution;
+<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg">Step 9Passed Create an h2 element in the section element and give it the text Coffee. solution;
+<section></section>Step 10Passed Up until now,
+you have been limited regarding the presentation and appearance of the content you create. To start taking control,
+add a style element within the head element. solution;
+<head><meta charset="utf-8" /><title>Cafe Menu</title></head><body><main><h1>CAMPER CAFE</h1><p>Est. 2020</p><section><h2>Coffee</h2></section></main></body>Step 11Passed You can add style to an element by specifying it in the style element and setting a property for it like this: element {
+    property: value;
+}
+
+Center your h1 element by setting its text-align property to the value center. solution;
+<style></style>Step 12Passed In the previous step,
+you used a type selector to style the h1 element. Center the h2 and p elements by adding a new type selector for each one to the existing style element. solution;
+;
+<style>h1 {
+    text-align: center;
+}
+
+</style>Step 13Passed You now have three type selectors with the exact same styling. You can add the same group of styles to many elements by creating a list of selectors. Each selector is separated with commas like this: selector1,
+selector2 {
+    property: value;
+}
+
+Delete the three existing type selectors and replace them with one selector list that centers the text for the h1,
+h2,
+and p elements. solution;
+;
+<style>h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+</style>Step 14Passed You have styled three elements by writing CSS inside the style tags. This works,
+but since there will be many more styles,
+it's best to put all the styles in a separate file and link to it.
+ We have created a separate styles.css file for you and switched the editor view to that file. You can change between files with the tabs at the top of the editor. Start by rewriting the styles you have created into the styles.css file. Make sure to exclude the opening and closing style tags. solution;
+Step 15Passed Now that you have the CSS in the styles.css file,
+go ahead and remove the style element and all its content. Once it is removed,
+the text that was centered will shift back to the left. solution;
+;
+<head><meta charset="utf-8" /><title>Cafe Menu</title><style>h1,
+h2,
+p {
+    text-align: center;
+}
+
+</style></head>Step 16Passed Now you need to link the styles.css file so the styles will be applied again. Nest a self-closing link element in the head element. Give it a rel attribute value stylesheet and an href attribute value of styles.css. solution;
+;
+<head><meta charset="utf-8" /><title>Cafe Menu</title></head>Step 17Passed For the styling of the page to look similar on mobile as it does on a desktop or laptop,
+you need to add a meta element with a special content attribute. Add the following within the head element: <meta name="viewport" content="width=device-width, init
+ solution;
+<head><meta charset="utf-8" /><title>Cafe Menu</title><link href="styles.css" rel="stylesheet"/></head>Step 18Passed The text is centered again so the link to the CSS file is working. Add another style to the file that changes the background-color property to brown for the body element. solution;
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+Step 19Passed That brown background makes it hard to read the text. Change the body element's background color to be burlywood so it has some color but you are still be able to read the text.
+ solution;
+body {
+    background-color: brown;
+}
+
+Step 20Passed The div element is used mainly for design layout purposes unlike the other content elements you have used so far. Add a div element inside the body element and then move all the other elements inside the new div. solution;
+;
+<body><main><h1>CAMPER CAFE</h1><p>Est. 2020</p><section><h2>Coffee</h2></section></main></body>Step 22Passed Comments in CSS look like this:
+/* comment here */
+
+In your style sheet,
+comment out the line containing the background-color property and value,
+so you can see the effect of only styling div element. This will make the background white again. solution;
+;
+background-color: burlywood;
+Step 23Passed Now use the existing div selector to set the background color of the div element to be burlywood. solution;
+div {
+    width: 300px;
+}
+
+Step 24Passed Now it's easy to see that the text is centered inside the div element. Currently, the width of the div element is specified in pixels (px). Change the width property's value to be 80%,
+to make it 80% the width of its parent element (body). solution;
+div {
+    width: 300px;
+    background-color: burlywood;
+}
+
+Step 25Passed Next,
+you want to center the div horizontally. You can do this by setting its margin-left and margin-right properties to auto. Think of the margin as invisible space around an element. Using these two margin properties,
+center the div element within the body element. solution;
+div {
+    width: 80%;
+    background-color: burlywood;
+}
